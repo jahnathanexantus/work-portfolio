@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: "Inter Tight", sans-serif;
+}
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.home-content {
+  color: white;
+  max-width: 600px;
+}
+.home-content h1 {
+  position: relative;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.home-content h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
+.home-content h3 {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+.home-content h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+.home-content p {
+  position: relative;
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+.home-content p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.6s;
+}
+.home-content .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+.home-content .btn-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
+}
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #081b29;
+  font-weight: 600;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+.btn-box a:nth-child(2)::before {
+  background: #00abf0;
+}
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn-box a:nth-child(2):hover {
+  color: #081b29;
+}
+.btn-box a:hover::before {
+  width: 100%;
+}
+.nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 65px;
+  background-color: black;
+  z-index: 2;
+}
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.home-sci::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 2.5s;
+  z-index: 2;
+}
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.home-sci a:hover {
+  color: #081b29;
+}
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.home-sci a:hover::before {
+  width: 100%;
+}
+.home-imgHover {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 500px;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+}
+.home-imgHover:hover {
+  background: #081b29;
+  opacity: 0.8;
+}
+
+.container-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+.nav-btn {
+  text-decoration: none;
+  color: red;
+  font-size: 26px;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.nav-btn:hover {
+  color: rgb(65, 74, 201);
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+  height: 100vh;
+}
+.intro-wrapper {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-items: center;
+}
+.intro-wrapper img {
+  height: 529px;
+  border-radius: 30px;
+  margin: auto;
+}
+.words-wrapper {
+  text-transform: uppercase;
+}
+.words-wrapper {
+  color: white;
+  margin-right: 40px;
+  line-height: 2;
+  text-align: center;
+}
+.project-container {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.project-pic {
+  height: 200px;
+}
+.project1 {
+  text-align: center;
+}
+.project1 p {
+  text-decoration: none;
+}
+
+.project-pic {
+  width: 100%;
+
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: all 0.4s;
+}
+.project-pic:hover {
+  height: 260px;
+}
+.project1 p {
+  min-height: 270px;
+  background-color: #fafafa;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 30px 20px;
+  line-height: 2;
+}
+.project1 img {
+  vertical-align: middle;
+}
+
+.aboutme-container {
+  background-color: black;
+}
+.aboutme-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (max-width: 700px) {
+  .home {
+    flex-direction: column;
+  }
+  .project-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-imgHover {
+    display: none;
+  }
+  .project-container {
+    height: auto;
+  }
+  .intro-pic {
+    display: none;
+  }
+  .nav-hm-btn {
+    display: none;
+  }
+  .intro-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
