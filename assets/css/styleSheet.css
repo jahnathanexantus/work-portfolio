@@ -203,7 +203,13 @@ body {
   background: #081b29;
   opacity: 0.8;
 }
-
+.my-pic {
+  width: 100%;
+  /* margin: auto; */
+  /* display: block; */
+  height: 100%;
+  object-fit: contain;
+}
 .container-wrapper {
   display: flex;
   align-items: center;
